@@ -98,5 +98,5 @@ tables = pd.DataFrame(salesList)
 
 
 # csv 추출
-tables.to_csv(f'~/Downloads/{driver.title}.csv')
+tables.to_csv(f'{driver.title}.csv')
 print(f'csv 추출 완료. 파일 경로 : 다운로드 폴더 > {driver.title}.csv')

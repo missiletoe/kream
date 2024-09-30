@@ -85,21 +85,21 @@ for r in results:
     try:
         status_value = r.find_element(By.CLASS_NAME, 'status_value').text
         if status_value == '':
-            status_value = 0
+            status_value = '0'
     except:
-        status_value = 0
+        status_value = '0'
     try:
         wish_figure = r.find_element(By.CLASS_NAME, 'wish_figure').text
         if wish_figure == '':
-            wish_figure = 0
+            wish_figure = '0'
     except:
-        wish_figure = 0
+        wish_figure = '0'
     try:
         review_figure = r.find_element(By.CLASS_NAME, 'review_figure').text
         if review_figure == '':
-            review_figure = 0
+            review_figure = '0'
     except:
-        review_figure = 0
+        review_figure = '0'
     
     search_result.append({
         '제품링크': pid,
@@ -203,5 +203,5 @@ df['관심상품_등록수'] = df['관심상품_등록수'].astype(int)
 df['스타일_업로드횟수'] = df['스타일_업로드횟수'].astype(int)
 
 # Save results to CSV
-df.to_csv(f'~/Downloads/"{a}" KREAM 검색결과 | {sort_options} | 50개.csv')
-print(f'csv 추출 완료. 파일 경로 : 다운로드 폴더 > "{a}" KREAM 검색결과 | {sort_options} | 50개.csv')
+df.to_csv(f'"{a}" KREAM 검색결과 | {sort_options} | 50개.csv')
+print(f'"{a}" KREAM 검색결과 | {sort_options} | 50개.csv 추출 완료')
