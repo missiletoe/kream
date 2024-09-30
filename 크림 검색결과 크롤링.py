@@ -203,5 +203,5 @@ df['관심상품_등록수'] = df['관심상품_등록수'].astype(int)
 df['스타일_업로드횟수'] = df['스타일_업로드횟수'].astype(int)
 
 # Save results to CSV
-df.to_csv(f'"{a}" KREAM 검색결과 | {sort_options} | 50개.csv')
+df.to_csv(f'CSV/"{a}" KREAM 검색결과 | {sort_options} | 50개.csv')
 print(f'"{a}" KREAM 검색결과 | {sort_options} | 50개.csv 추출 완료')

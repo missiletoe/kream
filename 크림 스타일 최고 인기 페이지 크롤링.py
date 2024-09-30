@@ -158,5 +158,5 @@ df['스타일_업로드횟수'] = df['스타일_업로드횟수'].astype(int)
 df_sorted = df.sort_values(by=['거래량', '관심상품_등록수', '스타일_업로드횟수'], ascending=[False, False, False])
 
 # csv로 추출
-df.to_csv(f'[{time.strftime("%Y-%m-%d %H.%M.%S", time.localtime(time.time()))}] 스타일 최고 인기! 조회 급상승(최근 3일).csv')
+df.to_csv(f'CSV/[{time.strftime("%Y-%m-%d %H.%M.%S", time.localtime(time.time()))}] 스타일 최고 인기! 조회 급상승(최근 3일).csv')
 print(f'[{time.strftime("%Y-%m-%d %H.%M.%S", time.localtime(time.time()))}] 스타일 최고 인기! 조회 급상승(최근 3일).csv 추출 완료')
